@@ -3,7 +3,7 @@ Templates for algorithms and data structures I’ve covered so far.
 
 ---
 
-## Data Structures
+# Data Structures
 - Array
 - Maps
 - Stacks
@@ -13,35 +13,46 @@ Templates for algorithms and data structures I’ve covered so far.
 
 ---
 
-## Algorithms
+# Algorithms
 
-### Backtracking
+## Backtracking
 - Permutations
 - Combinations
 - Subsequences
 - Subsets
 - Bucket Filling
 
-### Divide and Conquer
+## Divide and Conquer
 - Binary Search
 - Karatsuba
 - Merge Sort
 - Quick Sort
 
-### Greedy
+## Greedy
 - Activity Selection
 - Fractional Knapsack
 - Huffman Coding
 - Job Scheduling
 - Jump Game
 
-### Prefix Sum
+## Prefix Sum
 - 1D Prefix
 - 2D Prefix
 
-### Sliding Window
+## Sliding Window
 - Fixed Window
 - Variable Window
 - Subarray Count
 - Minimum Window Substring
 - Deque Window
+
+## Graph Theory
+- ### BFS
+  - Standard Graph and Tree BFS 
+  - Level wise Tree and BFS
+  - Multi source BFS
+- ### Union Find
+  - Standard Union Find
+- ### Minimum Spanning Tree
+  - Kruskal's Algorithm
+  - Prim's Algorithm
