@@ -56,3 +56,17 @@ Templates for algorithms and data structures I’ve covered so far.
 - ### Minimum Spanning Tree
   - Kruskal's Algorithm
   - Prim's Algorithm
+- ### DFS
+  - Iterative DFS
+  - Cycle detection using DFS
+- ### Shortest Path
+  - Dijkstra (Single source shortest path)
+  - Bellman Ford (Shortest path with negative edges)
+  - Floyd Warshall (All pair shortest path)
+  - K Shortest paths (Dijkstra)
+- ### Topological Sort
+  - Kahn Algorithm (BFS)
+- ### Bipartite Graph
+  - Bipartite coloring (2 colors)
+
+  
