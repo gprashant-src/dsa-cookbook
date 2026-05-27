@@ -1,17 +1,19 @@
 arr = [1, 4, 3, 2, 6, 10, 8]
 
-def prefix1d(arr):
-    P = [0] * (len(arr) + 1)
+class prefix1d:
+    def __init__(self, arr):
+        self.n = len(arr)
+        self.P = [0] * (self.n + 1)
 
-    for i in range(len(arr)):
-        P[i + 1] = P[i] + arr[i]
+        for i in range(self.n):
+            self.P[i + 1] = self.P[i] + arr[i]
+    
+    def query(self, left, right):
+        return self.P[right + 1] - self.P[left]
 
-    return P
 
-def range1d(l, r, P):
-    return P[r + 1] - P[l]
 l, r = 2, 5
 
 P = prefix1d(arr)
 # print(P)
-print("Range sum=",range1d(l, r, P))
+print("Range sum=",P.query(l, r))
