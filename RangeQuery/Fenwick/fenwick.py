@@ -24,7 +24,7 @@ class Fenwick:
     
     def query(self, left, right):
         if left > right or left < 0 or right >= self.n: return 0
-        if left == 0: return self._query[right]
+        if left == 0: return self._query(right)
         return self._query(right) - self._query(left - 1)
     
 arr = [3, 2, -1, 6, 5, 4]
