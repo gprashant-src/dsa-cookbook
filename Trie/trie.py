@@ -11,12 +11,10 @@ class Trie:
         node = self.root
 
         for ch in word:
-            idx = ord(ch) - ord("a")
-
-            if node.child[idx] is None:
-                node.child[idx] = Node()
+            if ch not in node.child:
+                node.child[ch] = Node()
             
-            node = node.child[idx]
+            node = node.child[ch]
         
         node.end = True
     
@@ -24,13 +22,11 @@ class Trie:
         node = self.root
 
         for ch in word:
-            idx = ord(ch) - ord("a")
-
-            if node.child[idx] is None:
-                # node.child[idx] = Node()
+            if ch not in node.child:
+                # node.child[ch] = Node()
                 return False
             
-            node = node.child[idx]
+            node = node.child[ch]
         
         return node.end
 
@@ -38,12 +34,10 @@ class Trie:
         node = self.root
 
         for ch in word:
-            idx = ord(ch) - ord("a")
-
-            if node.child[idx] is None:
-                # node.child[idx] = Node()
+            if ch not in node.child:
+                # node.child[ch] = Node()
                 return False
             
-            node = node.child[idx]
+            node = node.child[ch]
         
         return True
