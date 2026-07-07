@@ -2,18 +2,18 @@ A = [[1, 2, 3],
      [4, 1, 2],
      [1, 3, 4]]
 
-def prefix2d(A):
-    m, n = len(A), len(A[0])
-    P = [[0] * (n + 1) for _ in range(m + 1)]
+class prefix2d:
+    def __init__(self, grid):
+        m, n = len(grid), len(grid[0])
+        self.P = [[0] * (n + 1) for _ in range(m + 1)]
 
-    for i in range(m):
-        for j in range(n):
-            P[i + 1][j + 1] = A[i][j] + P[i + 1][j] + P[i][j + 1] - P[i][j]
+        for i in range(m):
+            for j in range(n):
+                self.P[i + 1][j + 1] = grid[i][j] + self.P[i + 1][j] + self.P[i][j + 1] - self.P[i][j]
 
-    return P
+    def query(self, x1, y1, x2, y2):    
+        return self.P[x2 + 1][y2 + 1] - self.P[x1][y2 + 1] - self.P[x2 + 1][y1] + self.P[x1][y1]
+    
 
-def range2d(x1, y1, x2, y2, P):
-    return P[x2 + 1][y2 + 1] - P[x1][y2 + 1] - P[x2 + 1][y1] + P[x1][y1]
-
-P = prefix2d(A)
-print(range2d(0, 0, 1, 1, P))
+pr = prefix2d(A)
+print(pr.query(0, 0, 1, 1))

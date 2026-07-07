@@ -31,3 +31,20 @@ arr = [3, 2, -1, 6, 5, 4]
 fw = Fenwick(arr)
 
 print(fw.query(1, 4))
+
+
+
+"""Binary Lifting
+def find(k):
+    idx = 0
+
+    P = 1 << (ft.n.bit_length() - 1)
+    while P:
+        nxt = idx + P
+        if nxt <= ft.n and ft.bit[nxt] < k:
+            k -= ft.bit[nxt]
+            idx = nxt
+        P >>= 1
+    
+    return idx
+"""

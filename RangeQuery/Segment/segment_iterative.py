@@ -49,3 +49,5 @@ sg = Segment(arr, op=min, I=float("inf"))
 print(sg.query(1, 4))
 sg.update(2, 4)
 print(sg.query(1, 4))
+
+#----------------------------------------------------
